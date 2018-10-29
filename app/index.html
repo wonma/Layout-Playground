@@ -2,24 +2,44 @@
 <html>
 <head>
 	<title>Lots of Food</title>
-	<link rel="stylesheet" type="text/css" href="temp/styles/styless.css">
+<!-- 	<link rel="stylesheet" type="text/css" href="temp/styles/style.css"> -->
+	<link rel="stylesheet" type="text/css" href="temp/styles/style2.css">
 </head>
 <body>
-	<main class="deals">
-	  <article class="sale-item">
-	    <h1>Computer Starter Kit</h1>
-	    <p>This is the best computer money can buy, if you don’t have much money.</p>
-	    <ul>
-	      <li>Computer</li>
-	      <li>Monitor</li>
-	      <li>Keyboard</li>
-	      <li>Mouse</li>
-	    </ul>
-	    <img src="https://www.w3.org/TR/css-flexbox-1/images/computer.jpg" alt="You get: a white computer with matching peripherals">
-	    <button>BUY NOW</button>
-	  </article>
+
+<aside><p class="explanation">Red Boxes are flex containers that have flex items in it. (here, each with two flex items.)</p></aside>
+
+<main class="deals">
+	<form action="">
+	    <div class="form-row">
+	      <label for="name">Name:</label>
+	      <input type="text" id="name">
+	    </div>
+	    <div class="form-row">
+	      <label for="favColor">Favorite Color:</label>
+	      <input type="text" id="favColor">
+	    </div>
+	 </form>
+
+	 <article class="sale-item">
+	  	<div class="sale-item__title">
+		    <h1>Computer Starter Kit</h1>
+		    <p>This is the best computer money can buy, if you don’t have much money.</p>
+	  	</div>
+	  	<div class="sale-item__cont">
+		    <ul>
+		      <li>Computer</li>
+		      <li>Monitor</li>
+		      <li>Keyboard</li>
+		      <li>Mouse</li>
+		    </ul>
+		    <img src="https://www.w3.org/TR/css-flexbox-1/images/computer.jpg" alt="You get: a white computer with matching peripherals">
+		    <button>BUY NOW</button>				
+	  	</div>
+
+	 </article>
 	  
-	  <article class="sale-item">
+<!-- 	  <article class="sale-item">
 	    <h1>Printer</h1>
 	    <p>Only capable of printing ASCII art.</p>
 	    <ul>
@@ -50,7 +70,77 @@
 	    <img src="https://www.w3.org/TR/css-flexbox-1/images/computer.jpg"
 	         alt="You get: a white computer with matching peripherals.">
 	    <button>BUY NOW</button>
-	  </article>
-	</main>
+	  </article> -->
+</main>
+
+
+<!-- second example -->
+<div class="column-layout" style="clear:both">
+  <div class="main-column">
+    <h2>Main Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam voluptatibus soluta, consequuntur, reiciendis debitis omnis fugiat libero pariatur amet laudantium minima consectetur tenetur. Repudiandae, autem, voluptate modi deleniti sequi voluptatum!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi earum fugit veniam amet quae sint vitae numquam dolore sunt quod a odio officia voluptate doloribus, at. Cum quasi mollitia eaque. Voluptatibus soluta, consequuntur, reiciendis debitis omnis fugiat libero pariatur amet laudantium.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam voluptatibus soluta, consequuntur, reiciendis debitis omnis fugiat libero pariatur amet laudantium minima consectetur tenetur. Repudiandae, autem, voluptate modi deleniti sequi voluptatum!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi earum fugit veniam amet quae sint vitae numquam dolore sunt quod a odio officia voluptate doloribus, at. Cum quasi mollitia eaque.</p>
+  </div>
+
+  <div class="sidebar-one">
+    <h3>Sidebar One</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum modi nisi tenetur sint dignissimos nulla, blanditiis nesciunt.</p>
+  </div>
+
+  <div class="sidebar-two">
+    <h3>Sidebar Two</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum modi nisi tenetur sint dignissimos nulla, blanditiis nesciunt.</p>
+  </div>
+</div>
+
+<!-- third example -->
+<div class="call-outs-container">
+  <div class="call-out">
+    <h4>Feature 1</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam obcaecati vel, placeat numquam omnis sit consectetur nobis molestias! Explicabo deserunt. Consectetur adipisicing elit. Quibusdam obcaecati vel, placeat numquam placeat numquam omnis sit consectetur.</p>
+  </div>
+
+  <div class="call-out">
+    <h4>Feature 2</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam obcaecati vel, placeat numquam omnis sit consectetur nobis molestias! Explicabo deserunt placeat numquam omnis.</p>
+  </div>
+
+  <div class="call-out">
+    <h4>Feature 3</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam obcaecati vel, placeat numquam omnis sit.</p>
+  </div>
+</div>
+
+<!-- fourth example -->
+<div class="fixed-size-container">
+  <div class="fixed-size">1</div>
+  <div class="fixed-size">2</div>
+  <div class="fixed-size">3</div>
+  <div class="fixed-size">4</div>
+  <div class="fixed-size">5</div>
+</div>
+
+<!-- fifth example -->
+<div class="banner">
+  <div class="center-me">Center Me Plz</div>
+</div>
+
+<!-- sixth example -->
+<div class="equal-height-container">
+  <div class="first">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quasi similique amet voluptatem molestiae nostrum ab nesciunt blanditiis repellendus quos, sequi sunt, dolorem quis facilis mollitia nemo modi doloribus quo.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat quisquam, veritatis ducimus, vero magnam hic quia pariatur asperiores laudantium quod nobis perspiciatis, expedita quo reprehenderit quasi iusto ullam error reiciendis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quasi similique amet voluptatem molestiae nostrum ab nesciunt blanditiis repellendus quos, sequi sunt, dolorem quis facilis mollitia nemo modi doloribus quo.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat quisquam, veritatis ducimus, vero magnam hic quia pariatur asperiores laudantium quod nobis perspiciatis, expedita quo reprehenderit quasi iusto ullam error reiciendis.</p>
+  </div>
+
+  <div class="second">
+    <div class="second-a">A</div>
+    <div class="second-b">B</div>
+  </div>
+</div>
+
 </body>
 </html>

@@ -23,13 +23,35 @@ gulp.task('watch', function() {
 	});
 });
 
+gulp.task('watch2', function() {
+	browserSync.init({
+		notify: false,
+		server: {
+			baseDir: "./app",
+			index: "about.html"
+		}
+	});
+	watch('./app/about.html', function() {
+		browserSync.reload();
+	});
+	watch('./app/styles/**/*.css', function() {
+		gulp.start('cssInject');
+	});
+});
+
+
+
 gulp.task('style', function() {
-	return gulp.src('./app/styles/style.css')
+	return gulp.src(['./app/styles/style.css', './app/styles/style2.css'])
 		.pipe(postcss([cssImport, cssvars, nested, autoprefixer]))
+		.on('error', function(errorInfo) {
+			console.log(errorInfo.toString());
+			this.emit('end');			
+		})
 		.pipe(gulp.dest('./app/temp/styles'))
 });
 
 gulp.task('cssInject', ['style'], function() {
-	return gulp.src('./app/temp/styles/style.css')
+	return gulp.src('./app/temp/styles/*.css')
 		.pipe(browserSync.stream());
 });
